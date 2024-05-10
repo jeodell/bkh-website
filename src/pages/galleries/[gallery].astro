@@ -7,14 +7,22 @@ export function getStaticPaths() {
     { params: { gallery: 'illustration' } },
     { params: { gallery: 'landscape' } },
     { params: { gallery: 'portrait' } },
-  ]
+  ] as const
 }
 
-const { gallery } = Astro.params
+const imageLinks = {
+  drone: 'chef.jpg',
+  illustration: 'b_laying.jpg',
+  landscape: 'kauai.jpg',
+  portrait: 'mountains.jpg',
+}
+
+const { gallery } = Astro.params as { gallery: keyof typeof imageLinks }
 ---
 
 <Layout title=`Brianna Haferman | ${gallery.charAt(0).toUpperCase() + gallery.slice(1)}`>
   <main class="min-h-[calc(100vh-96px-88px)] bg-white text-gray-700">
     <h1>{gallery} page!</h1>
+    <img src={`/images/${imageLinks[gallery]}`} alt={gallery} />
   </main>
 </Layout>
