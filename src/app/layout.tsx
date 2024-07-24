@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'Jason', url: 'https://jeodell.github.io' }],
   creator: 'Brianna Haferman',
   publisher: 'Brianna Haferman',
+  metadataBase: new URL('https://briannahaferman.com'),
   openGraph: {
     title: 'Brianna Haferman',
     description: 'Creative media portfolio for Brianna Haferman',
