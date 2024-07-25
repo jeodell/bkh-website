@@ -1,4 +1,4 @@
-export default function page() {
+export default function About() {
   return (
     <div className="mx-auto w-2/3 max-w-5xl py-12">
       <section>

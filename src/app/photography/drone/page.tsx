@@ -1,3 +1,3 @@
-export default function page() {
+export default function Drone() {
   return <div>page</div>
 }

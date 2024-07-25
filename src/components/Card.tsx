@@ -1,6 +1,6 @@
 import { classNames } from '../helper/helper'
 
-interface CardProps {
+type CardProps = {
   title: string
   body: string
   href: string
