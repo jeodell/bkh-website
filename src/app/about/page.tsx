@@ -10,6 +10,7 @@ export default function About() {
           className="img-fluid"
           width={500}
           height={333}
+          priority
         />
       </div>
       <div className="col-span-2 flex flex-col justify-center gap-y-4 px-4">
