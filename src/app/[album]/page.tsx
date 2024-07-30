@@ -24,17 +24,8 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
   }
 }
 
-export function getStaticPaths() {
-  return {
-    paths: [
-      { params: { album: 'film' } },
-      { params: { album: 'graphic-design' } },
-      { params: { album: 'illustration' } },
-      { params: { album: 'drone' } },
-      { params: { album: 'nature' } },
-      { params: { album: 'portrait' } },
-      { params: { album: 'travel' } },
-    ] as const,
-    fallback: false,
-  }
+export function generateStaticParams() {
+  const pages = ['film', 'graphic-design', 'illustration', 'drone', 'nature', 'portrait', 'travel']
+  const staticParams = pages.map((page) => ({ album: page }))
+  return staticParams
 }
