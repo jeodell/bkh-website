@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 }
 
 export function generateStaticParams() {
-  const pages = ['film', 'graphic-design', 'illustration', 'drone', 'nature', 'portrait', 'travel']
+  const pages = ['film', 'design', 'drone', 'nature', 'portrait', 'travel']
   const staticParams = pages.map((page) => ({ album: page }))
   return staticParams
 }
