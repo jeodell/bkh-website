@@ -3,7 +3,6 @@ import PhotoGrid from '../../components/PhotoGrid'
 
 type Props = {
   params: { album: string }
-  searchParams: { [key: string]: string | string[] | undefined }
 }
 
 export default function Page({ params }: { params: { album: string } }) {
@@ -17,7 +16,7 @@ export default function Page({ params }: { params: { album: string } }) {
   )
 }
 
-export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const albumName = params.album?.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 
   return {
