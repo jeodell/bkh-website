@@ -16,9 +16,13 @@ const config: Config = {
       colors: {
         drone: '#dbe9f1',
         illustration: '#dceae9',
-        landscape: '#e6eee5',
+        nature: '#e6eee5',
         portrait: '#e9ecf1',
       },
+    },
+    screens: {
+      xs: '475px',
+      ...defaultTheme.screens,
     },
   },
   darkMode: 'class',
