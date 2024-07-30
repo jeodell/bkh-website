@@ -1,5 +1,7 @@
 import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Navbar() {
   return (
@@ -20,43 +22,43 @@ export default function Navbar() {
           >
             <div className="py-1">
               <MenuItem>
-                <a
-                  href="/photography/travel"
+                <Link
+                  href="travel"
                   className="block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                 >
                   Travel
-                </a>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <a
-                  href="/photography/nature"
+                <Link
+                  href="nature"
                   className="block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                 >
                   Nature
-                </a>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <a
-                  href="/photography/portrait"
+                <Link
+                  href="portrait"
                   className="block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                 >
                   Portrait
-                </a>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <a
-                  href="/photography/drone"
+                <Link
+                  href="drone"
                   className="block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                 >
                   Drone
-                </a>
+                </Link>
               </MenuItem>
             </div>
           </MenuItems>
         </Menu>
-        <a href="/film" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
+        <Link href="film" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
           Film
-        </a>
+        </Link>
         <Menu as="div" className="peer relative inline-block text-left">
           <div>
             <MenuButton className="inline-flex w-full justify-center gap-x-1 rounded-md bg-white px-3 py-2 text-sm">
@@ -71,20 +73,20 @@ export default function Navbar() {
           >
             <div className="py-1">
               <MenuItem>
-                <a
-                  href="/design/graphic-design"
+                <Link
+                  href="graphic-design"
                   className="block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                 >
                   Graphic Design
-                </a>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <a
-                  href="/design/illustration"
+                <Link
+                  href="illustration"
                   className="block px-4 py-2 text-sm data-[focus]:bg-gray-100 data-[focus]:text-gray-900"
                 >
                   Illustration
-                </a>
+                </Link>
               </MenuItem>
             </div>
           </MenuItems>
@@ -127,9 +129,9 @@ export default function Navbar() {
       {/* Center */}
       <div className="mt-2 flex flex-col items-center justify-center sm:mt-0">
         <div className="flex flex-col items-center justify-center text-center">
-          <a className="text-xl" href="/">
+          <Link href="/" className="text-xl">
             Brianna Haferman
-          </a>
+          </Link>
           <div className="lowercase text-gray-500">Portraits, Nature, and the occasional Adventure</div>
         </div>
       </div>
@@ -137,41 +139,43 @@ export default function Navbar() {
       {/* Right */}
       <div className="hidden items-center justify-end sm:flex sm:gap-x-4">
         <div className="hidden justify-end sm:mr-6 sm:flex sm:space-x-8">
-          <a href="/about" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
+          <Link href="/about" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
             About
-          </a>
-          <a href="/contact" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
+          </Link>
+          <Link href="/contact" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
             Contact
-          </a>
+          </Link>
         </div>
       </div>
 
       {/* Mobile menu, show/hide based on menu state. */}
       <div className="sm:hidden" id="mobile-menu">
         <div className="space-y-1 pb-3 pt-2">
-          <a href="/" className="block border-l-4 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-blue-700">
+          <Link href="/" className="block border-l-4 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-blue-700">
             Home
-          </a>
-          <a
+          </Link>
+          <Link
             href="/#gallery"
             className="hover: block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50"
           >
             Gallery
-          </a>
-          <a
+          </Link>
+          <Link
             href="/about"
             className="hover: block border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-500 hover:border-gray-300 hover:bg-gray-50"
           >
             About
-          </a>
+          </Link>
         </div>
         <div className="border-t border-gray-200 pb-3 pt-4">
           <div className="flex items-center px-4">
             <div className="flex-shrink-0">
-              <img
+              <Image
                 className="h-10 w-10 rounded-full"
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                alt=""
+                alt="logo"
+                width={40}
+                height={40}
               />
             </div>
             <div className="ml-3">
