@@ -8,16 +8,19 @@ export default function Home() {
         <Image
           alt="cover photo of mountains"
           src="/images/mountains.jpg"
-          className="h-auto w-full object-cover"
+          className="h-auto max-h-96 w-full object-cover lg:max-h-[480px]"
           width={1440}
           height={960}
+          priority
         />
       </div>
-      <div className="flex items-center justify-between p-24">
-        <Card href="/drone" title="Drone" body="Drone photos" color="#dbe9f1" />
-        <Card href="/illustration" title="Illustration" body="Illustration photos" color="#dceae9" />
-        <Card href="/nature" title="Nature" body="Nature photos" color="#e6eee5" />
-        <Card href="/portrait" title="Portrait" body="Portrait photos" color="#e9ecf1" />
+      <div className="grid grid-cols-3 gap-4 p-24">
+        <Card href="/travel" title="Travel" color="bg-travel" />
+        <Card href="/nature" title="Nature" color="bg-nature" />
+        <Card href="/portrait" title="Portrait" color="bg-portrait" />
+        <Card href="/drone" title="Drone" color="bg-drone" />
+        <Card href="film" title="Film" color="bg-film" />
+        <Card href="/design" title="Design" color="bg-design" />
       </div>
     </>
   )

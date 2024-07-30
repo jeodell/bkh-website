@@ -1,5 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 import type { Config } from 'tailwindcss'
-const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 const config: Config = {
   content: [
@@ -9,15 +10,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
-        drone: '#dbe9f1',
-        illustration: '#dceae9',
+        drone: '#f1e9e5',
+        design: '#dceae9',
+        'design-dark': '#afc3c1',
         nature: '#e6eee5',
-        portrait: '#e9ecf1',
+        portrait: '#f1f0e9',
+        travel: '#dbe9f1',
+        film: '#e9ecf1',
       },
     },
     screens: {
