@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar'
 
 import type { Metadata } from 'next'
 import '../globals.css'
-import { classNames } from '../helper/helper'
+import { classNames } from '../lib/helper'
 
 const inter = Inter({ subsets: ['latin'] })
 

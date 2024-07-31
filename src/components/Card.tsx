@@ -1,4 +1,4 @@
-import { classNames } from '../helper/helper'
+import { classNames } from '../lib/helper'
 
 type CardProps = {
   title: string
