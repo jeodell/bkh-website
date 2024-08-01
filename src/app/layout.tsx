@@ -2,9 +2,10 @@ import { Inter } from 'next/font/google'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 
+import { Toaster } from '@/components/ui/toaster'
+import { cn } from '@/lib/utils'
 import type { Metadata } from 'next'
 import '../globals.css'
-import { classNames } from '../lib/helper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,10 +44,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={classNames(inter.className, 'bg-white text-gray-700')}>
+      <body className={cn(inter.className, 'bg-white text-gray-700')}>
         <Navbar />
         <main className="min-h-[calc(100vh-96px-88px)]">{children}</main>
         <Footer />
+        <Toaster />
       </body>
     </html>
   )
