@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className="grid h-24 w-full grid-cols-3 items-center border-b border-gray-200 bg-white px-4 py-2">
       {/* Left */}
-      <div className="hidden items-center justify-start sm:flex sm:gap-x-4">
+      <div className="hidden items-center justify-start md:flex md:gap-x-4">
         <Menu as="div" className="peer relative inline-block text-left">
           <div>
             <MenuButton className="inline-flex w-full justify-center gap-x-1 rounded-md bg-white px-3 py-2 text-sm">
@@ -65,7 +65,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu button */}
-      <div className="-mr-2 flex items-center sm:hidden">
+      <div className="-mr-2 flex items-center md:hidden">
         <button
           type="button"
           className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
@@ -98,7 +98,7 @@ export default function Navbar() {
       </div>
 
       {/* Center */}
-      <div className="mt-2 flex flex-col items-center justify-center sm:mt-0">
+      <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center text-center">
           <Link href="/" className="text-xl">
             Brianna Haferman
@@ -108,8 +108,8 @@ export default function Navbar() {
       </div>
 
       {/* Right */}
-      <div className="hidden items-center justify-end sm:flex sm:gap-x-4">
-        <div className="hidden justify-end sm:mr-6 sm:flex sm:space-x-8">
+      <div className="hidden items-center justify-end md:flex md:gap-x-4">
+        <div className="hidden justify-end md:mr-6 md:flex md:space-x-8">
           <Link href="/about" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
             About
           </Link>
@@ -120,7 +120,7 @@ export default function Navbar() {
       </div>
 
       {/* Mobile menu, show/hide based on menu state. */}
-      <div className="sm:hidden" id="mobile-menu">
+      <div className="md:hidden" id="mobile-menu">
         <div className="space-y-1 pb-3 pt-2">
           <Link href="/" className="block border-l-4 bg-indigo-50 py-2 pl-3 pr-4 text-base font-medium text-blue-700">
             Home
