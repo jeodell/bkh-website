@@ -14,3 +14,10 @@ export async function sendContactForm(data: {
     return res.json()
   })
 }
+
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
