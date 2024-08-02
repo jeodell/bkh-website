@@ -14,13 +14,14 @@ import { z } from 'zod'
 const emailRegex = /\S+@\S+\.\S+/
 
 const formSchema = z.object({
-  name: z.string().min(1, 'Name must be at least 1 character').max(50, 'Name must be at most 50 characters'),
+  name: z.string().min(1, 'Name is requred').max(50, 'Name must be at most 50 characters'),
   // email regex
   email: z
     .string()
+    .min(1, 'Email is required')
     .email()
     .refine((email) => emailRegex.test(email), 'Invalid email address'),
-  message: z.string().min(1, 'Message must be at least 1 character').max(500, 'Message must be at most 500 characters'),
+  message: z.string().min(1, 'Message is required').max(500, 'Message must be at most 500 characters'),
 })
 
 export default function Contact() {
@@ -84,7 +85,7 @@ export default function Contact() {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="space-y-12">
-            <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8">
+            <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-4">
               <div>
                 <FormField
                   control={form.control}
@@ -93,21 +94,12 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Name</FormLabel>
                       <FormControl>
-                        <Input className="focus-visible:ring-design-dark" {...field} />
+                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                {/* <input
-                  {...register('name', { required: true })}
-                  id="name"
-                  name="name"
-                  type="text"
-                  autoComplete="name"
-                  className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-design-dark focus:ring-2 focus:ring-inset focus:ring-design-dark sm:text-sm sm:leading-6"
-                />
-                {errors.name && <span className="text-xs text-red-500">This field is required</span>} */}
               </div>
               <div>
                 <FormField
@@ -117,21 +109,12 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Email</FormLabel>
                       <FormControl>
-                        <Input className="focus-visible:ring-design-dark" {...field} />
+                        <Input {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                {/* <input
-                  {...register('email', { required: true })}
-                  id="email"
-                  name="email"
-                  type="email"
-                  autoComplete="email"
-                  className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-design-dark focus:ring-2 focus:ring-inset focus:ring-design-dark sm:text-sm sm:leading-6"
-                />
-                {errors.email && <span className="text-xs text-red-500">This field is required</span>} */}
               </div>
               <div>
                 <FormField
@@ -141,20 +124,12 @@ export default function Contact() {
                     <FormItem>
                       <FormLabel>Message</FormLabel>
                       <FormControl>
-                        <Textarea className="focus-visible:ring-design-dark" {...field} />
+                        <Textarea {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                {/* <textarea
-                  {...register('message', { required: true })}
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-design-dark focus:ring-2 focus:ring-inset focus:ring-design-dark sm:text-sm sm:leading-6"
-                />
-                {errors.message && <span className="text-xs text-red-500">This field is required</span>} */}
               </div>
             </div>
           </div>
