@@ -18,7 +18,6 @@ const config: Config = {
         // custom
         drone: '#f1e9e5',
         design: '#dceae9',
-        'design-dark': '#afc3c1',
         nature: '#e6eee5',
         portrait: '#f1f0e9',
         travel: '#dbe9f1',
@@ -27,7 +26,7 @@ const config: Config = {
         // shadcn
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        ring: '#afc3c1',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         primary: {
