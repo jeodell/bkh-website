@@ -138,7 +138,7 @@ export default function Contact() {
             <Button type="button" variant="ghost" size="sm" onClick={onCancel}>
               Cancel
             </Button>
-            <Button type="submit" variant="default" size="sm">
+            <Button type="submit" variant="default" size="sm" className="focus-visible:ring-offset-2">
               Send
             </Button>
           </div>
