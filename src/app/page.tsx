@@ -14,13 +14,13 @@ export default function Home() {
           priority
         />
       </div>
-      <div className="container grid grid-cols-1 gap-4 py-12 sm:grid-cols-2 lg:grid-cols-3">
-        <Card href="/travel" title="Travel" color="bg-travel" />
-        <Card href="/nature" title="Nature" color="bg-nature" />
-        <Card href="/portrait" title="Portrait" color="bg-portrait" />
-        <Card href="/drone" title="Drone" color="bg-drone" />
-        <Card href="film" title="Film" color="bg-film" />
-        <Card href="/design" title="Design" color="bg-design" />
+      <div className="container grid max-w-6xl grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-3">
+        <Card href="/travel" title="Travel" color="bg-travel" src="/images/travel/cover.jpg" />
+        <Card href="/nature" title="Nature" color="bg-nature" src="/images/nature/cover.jpg" />
+        <Card href="/portrait" title="Portrait" color="bg-portrait" src="/images/portrait/cover.jpg" />
+        <Card href="/drone" title="Drone" color="bg-drone" src="/images/drone/cover.jpg" />
+        <Card href="film" title="Film" color="bg-film" src="/images/film/cover.jpg" />
+        <Card href="/design" title="Design" color="bg-design" src="/images/design/cover.jpg" />
       </div>
     </>
   )

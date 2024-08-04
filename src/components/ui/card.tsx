@@ -1,9 +1,12 @@
 import { cn } from '@/lib/utils'
+import Image from 'next/image'
+import Link from 'next/link'
 
 type CardProps = {
   title: string
   href: string
   color: string
+  src: string
 }
 
 export default function Card(props: CardProps) {
@@ -11,9 +14,10 @@ export default function Card(props: CardProps) {
 
   return (
     <div className={cn(`${color}`, 'flex cursor-pointer rounded-lg p-8')}>
-      <a href={href} className="h-full w-full">
+      <Link href={href} className="h-full w-full">
         <h2>{title}</h2>
-      </a>
+        <Image src={props.src} alt={title} className="h-auto w-full object-cover" height={100} width={67} />
+      </Link>
     </div>
   )
 }

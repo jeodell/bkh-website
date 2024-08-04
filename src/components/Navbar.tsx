@@ -124,7 +124,7 @@ export default function Navbar() {
       <div className="flex items-center justify-center">
         <Link
           href="/"
-          className="rounded-md px-3 py-2 text-xl font-semibold hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="rounded-md px-3 py-2 text-2xl font-extralight hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           Brianna Haferman
         </Link>
