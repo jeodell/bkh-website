@@ -2,10 +2,11 @@ import { Button } from '@components/ui/button'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@components/ui/dropdown-menu'
 import { ChevronDownIcon } from 'lucide-react'
 import Link from 'next/link'
+import NavbarLink from './ui/navbar-link'
 
 export default function Navbar() {
   return (
-    <nav className="grid h-24 w-full grid-cols-3 items-center border-b border-gray-200 bg-white px-4 py-2">
+    <nav className="grid min-h-28 w-full grid-cols-3 items-center border-b border-gray-200 bg-white px-4 py-2">
       {/* Mobile menu */}
       <div className="-mr-2 flex items-center lg:hidden">
         <DropdownMenu>
@@ -60,12 +61,12 @@ export default function Navbar() {
             asChild
             className="inline-flex justify-center gap-x-1 rounded-md bg-white px-3 py-2 text-sm"
           >
-            <Button variant="ghost">
+            <Button variant="ghost" className="text-sm font-normal hover:bg-background hover:text-gray-500">
               Photography
               <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-gray-400" />
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56 p-2">
+          <DropdownMenuContent className="w-56 bg-white p-2">
             <DropdownMenuItem asChild>
               <Link href="travel" className="w-full py-2">
                 Travel
@@ -88,18 +89,17 @@ export default function Navbar() {
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <Link href="film" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
-          Film
-        </Link>
-        <Link href="design" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
-          Design
-        </Link>
+        <NavbarLink href="film" text="Film" />
+        <NavbarLink href="design" text="Design" />
       </div>
 
       {/* Center */}
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center text-center">
-          <Link href="/" className="text-xl">
+          <Link
+            href="/"
+            className="rounded-md px-3 py-2 text-xl hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          >
             Brianna Haferman
           </Link>
           <div className="lowercase text-gray-500">Portraits, Nature, and the occasional Adventure</div>
@@ -109,12 +109,8 @@ export default function Navbar() {
       {/* Right */}
       <div className="hidden items-center justify-end lg:flex lg:gap-x-4">
         <div className="hidden justify-end lg:mr-6 lg:flex lg:space-x-8">
-          <Link href="/about" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
-            About
-          </Link>
-          <Link href="/contact" className="inline-flex items-center px-3 py-2 text-sm hover:text-gray-500">
-            Contact
-          </Link>
+          <NavbarLink href="about" text="About" />
+          <NavbarLink href="contact" text="Contact" />
         </div>
       </div>
     </nav>
