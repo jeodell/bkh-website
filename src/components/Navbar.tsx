@@ -3,7 +3,11 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuPortal,
   DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from '@components/ui/dropdown-menu'
 import { ChevronDownIcon } from 'lucide-react'
@@ -36,26 +40,33 @@ export default function Navbar() {
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56 bg-white p-2">
-            <DropdownMenuItem asChild>
-              <Link href="travel" className="w-full cursor-pointer py-2">
-                Travel
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="nature" className="w-full cursor-pointer py-2">
-                Nature
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="portrait" className="w-full cursor-pointer py-2">
-                Portrait
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuItem asChild>
-              <Link href="drone" className="w-full cursor-pointer py-2">
-                Drone
-              </Link>
-            </DropdownMenuItem>
+            <DropdownMenuSub>
+              <DropdownMenuSubTrigger>Photography</DropdownMenuSubTrigger>
+              <DropdownMenuPortal>
+                <DropdownMenuSubContent className="bg-white p-2">
+                  <DropdownMenuItem asChild>
+                    <Link href="travel" className="w-full cursor-pointer py-2">
+                      Travel
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="nature" className="w-full cursor-pointer py-2">
+                      Nature
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="portrait" className="w-full cursor-pointer py-2">
+                      Portrait
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <Link href="drone" className="w-full cursor-pointer py-2">
+                      Drone
+                    </Link>
+                  </DropdownMenuItem>
+                </DropdownMenuSubContent>
+              </DropdownMenuPortal>
+            </DropdownMenuSub>
             <DropdownMenuItem asChild>
               <Link href="film" className="w-full cursor-pointer py-2">
                 Film
@@ -66,7 +77,7 @@ export default function Navbar() {
                 Design
               </Link>
             </DropdownMenuItem>
-            <DropdownMenuSeparator />
+            <DropdownMenuSeparator className="h-[2px] bg-nature" />
             <DropdownMenuItem asChild>
               <Link href="about" className="w-full cursor-pointer py-2">
                 About
