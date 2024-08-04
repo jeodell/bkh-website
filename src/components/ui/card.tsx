@@ -2,14 +2,14 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 
-type CardProps = {
+type Props = {
   title: string
   href: string
   color: string
   src: string
 }
 
-export default function Card(props: CardProps) {
+export default function Card(props: Props) {
   const { title, href, color } = props
 
   return (

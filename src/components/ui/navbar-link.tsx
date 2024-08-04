@@ -1,11 +1,11 @@
 import Link from 'next/link'
 
-type NavbarLinkProps = {
+type Props = {
   href: string
   text: string
 }
 
-export default function navbarLink(props: NavbarLinkProps) {
+export default function navbarLink(props: Props) {
   return (
     <Link
       href={props.href}
