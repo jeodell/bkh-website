@@ -12,7 +12,10 @@ export default function Footer() {
           </div>
           <div className="col-span-1 ml-auto flex flex-col items-start justify-center">
             <p className="text-sm text-zinc-400">Email</p>
-            <a href="mailto:briannahaferman@gmail.com" className="text-sm text-zinc-600">
+            <a
+              href="mailto:briannahaferman@gmail.com"
+              className="text-sm text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
               briannahaferman@gmail.com
             </a>
           </div>
