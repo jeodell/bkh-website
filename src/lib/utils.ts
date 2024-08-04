@@ -21,3 +21,28 @@ import { twMerge } from 'tailwind-merge'
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+export const photoLinks: { [key: string]: { src: string; alt: string }[] } = {
+  portrait: [{ src: 'chef.jpg', alt: 'chefmannnnn' }],
+  nature: [
+    { src: 'b_laying.jpg', alt: 'woman laying in field by mountain' },
+    {
+      src: 'kauai.jpg',
+      alt: 'hanalei bay in kauai',
+    },
+    {
+      src: 'mountains.jpg',
+      alt: 'mountains',
+    },
+    {
+      src: 'chef.jpg',
+      alt: 'chefmannnnn',
+    },
+  ],
+  travel: [
+    {
+      src: 'b_laying.jpg',
+      alt: 'woman laying in field by mountain',
+    },
+  ],
+}
