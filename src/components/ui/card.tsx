@@ -15,7 +15,7 @@ export default function Card(props: Props) {
   return (
     <div className={cn(`${color}`, 'flex cursor-pointer rounded-lg p-8')}>
       <Link href={href} className="h-full w-full">
-        <h2>{title}</h2>
+        <h2 className="pb-4">{title}</h2>
         <Image src={props.src} alt={title} className="h-auto w-full object-cover" height={100} width={67} />
       </Link>
     </div>

@@ -6,7 +6,7 @@ export default function About() {
       <div className="col-span-1">
         <div className="max-w-96">
           <Image
-            src="/images/b_laying.jpg"
+            src="/images/about/b_laying.jpg"
             alt="photographer laying on mountainside"
             className="w-auto"
             width={500}
