@@ -36,7 +36,7 @@ export const photoLinks: { [key: string]: { src: string; alt: string }[] } = {
     { src: 'newborn1.jpg', alt: 'newborn baby in blanket' },
     { src: 'newborn2.jpg', alt: 'mom and dad holding newborn' },
     { src: 'river_baby.jpg', alt: 'mom and baby playing in river' },
-    { src: 'veil.jpg  ', alt: 'woman under veil' },
+    { src: 'veil.jpg', alt: 'woman under veil' },
   ],
   nature: [
     { src: 'b_laying.jpg', alt: 'woman laying in field by mountain' },
