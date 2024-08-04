@@ -1,5 +1,11 @@
 import { Button } from '@components/ui/button'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@components/ui/dropdown-menu'
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@components/ui/dropdown-menu'
 import { ChevronDownIcon } from 'lucide-react'
 import Link from 'next/link'
 import NavbarLink from './ui/navbar-link'
@@ -29,25 +35,46 @@ export default function Navbar() {
               </svg>
             </Button>
           </DropdownMenuTrigger>
-          <DropdownMenuContent className="w-56 p-2">
+          <DropdownMenuContent className="w-56 bg-white p-2">
             <DropdownMenuItem asChild>
-              <Link href="travel" className="w-full py-2">
+              <Link href="travel" className="w-full cursor-pointer py-2">
                 Travel
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="nature" className="w-full py-2">
+              <Link href="nature" className="w-full cursor-pointer py-2">
                 Nature
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="portrait" className="w-full py-2">
+              <Link href="portrait" className="w-full cursor-pointer py-2">
                 Portrait
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="drone" className="w-full py-2">
+              <Link href="drone" className="w-full cursor-pointer py-2">
                 Drone
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="film" className="w-full cursor-pointer py-2">
+                Film
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="design" className="w-full cursor-pointer py-2">
+                Design
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link href="about" className="w-full cursor-pointer py-2">
+                About
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem asChild>
+              <Link href="contact" className="w-full cursor-pointer py-2">
+                Contact
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -94,16 +121,13 @@ export default function Navbar() {
       </div>
 
       {/* Center */}
-      <div className="flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center text-center">
-          <Link
-            href="/"
-            className="rounded-md px-3 py-2 text-xl hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-          >
-            Brianna Haferman
-          </Link>
-          <div className="lowercase text-gray-500">Portraits, Nature, and the occasional Adventure</div>
-        </div>
+      <div className="flex items-center justify-center">
+        <Link
+          href="/"
+          className="rounded-md px-3 py-2 text-xl font-semibold hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        >
+          Brianna Haferman
+        </Link>
       </div>
 
       {/* Right */}
