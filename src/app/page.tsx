@@ -40,7 +40,12 @@ export default function Home() {
           src="/images/drone/Quarry Park and Greenway WS_Drone_Brianna Haferman.jpg"
         />
         <Card href="film" title="Film" color="bg-film" src="/images/film/cover.jpg" />
-        <Card href="/design" title="Design" color="bg-design" src="/images/design/cover.jpg" />
+        <Card
+          href="/design"
+          title="Design"
+          color="bg-design"
+          src="/images/design/Visitors Center_Great Trails State Poster_V3.jpg"
+        />
       </div>
     </>
   )
