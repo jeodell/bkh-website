@@ -53,7 +53,7 @@ export const photoLinks: { [key: string]: { src: string; alt: string }[] } = {
     { src: 'Trail in field_Brianna Haferman.jpg', alt: '' },
     { src: 'Trout Lily_Brianna Haferman.jpg', alt: '' },
     { src: 'Waterfall stream_Brianna Haferman.jpg', alt: '' },
-    { src: 'Wild Blue Phlox_Brianna Haferman.jpg    ', alt: '' },
+    { src: 'Wild Blue Phlox_Brianna Haferman.jpg', alt: '' },
   ],
   travel: [
     { src: 'A Day in Munich_Brianna Haferman.jpg', alt: '' },

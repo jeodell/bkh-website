@@ -50,6 +50,7 @@ export default function Contact() {
     const message = data.message
 
     try {
+      // TODO revert
       // await sendContactForm({
       //   name,
       //   email,
