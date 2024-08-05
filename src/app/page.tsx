@@ -15,10 +15,30 @@ export default function Home() {
         />
       </div>
       <div className="container grid max-w-7xl grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-6">
-        <Card href="/travel" title="Travel" color="bg-travel" src="/images/travel/cover.jpg" />
-        <Card href="/nature" title="Nature" color="bg-nature" src="/images/nature/cover.jpg" />
-        <Card href="/portrait" title="Portrait" color="bg-portrait" src="/images/portrait/kayak.jpg" />
-        <Card href="/drone" title="Drone" color="bg-drone" src="/images/drone/cover.jpg" />
+        <Card
+          href="/travel"
+          title="Travel"
+          color="bg-travel"
+          src="/images/travel/Grand Teton National Park at Sunset_Brianna Haferman.jpg"
+        />
+        <Card
+          href="/nature"
+          title="Nature"
+          color="bg-nature"
+          src="/images/nature/Bee on Cutleaf Coneflower_Brianna Haferman.jpg"
+        />
+        <Card
+          href="/portrait"
+          title="Portrait"
+          color="bg-portrait"
+          src="/images/portrait/Woman on a dock_Brianna Haferman.jpg"
+        />
+        <Card
+          href="/drone"
+          title="Drone"
+          color="bg-drone"
+          src="/images/drone/Quarry Park and Greenway WS_Drone_Brianna Haferman.jpg"
+        />
         <Card href="film" title="Film" color="bg-film" src="/images/film/cover.jpg" />
         <Card href="/design" title="Design" color="bg-design" src="/images/design/cover.jpg" />
       </div>
