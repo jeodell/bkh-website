@@ -19,7 +19,7 @@ export default function Home() {
           href="/travel"
           title="Travel"
           color="bg-travel"
-          src="/images/travel/Grand Teton National Park at Sunset_Brianna Haferman.jpg"
+          src="/images/travel/Hikers overlooking Mount Assiniboine_Brianna Haferman.jpg"
         />
         <Card
           href="/nature"
