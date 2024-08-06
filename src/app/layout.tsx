@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={cn(inter.className, 'bg-white text-gray-700')}>
         <Navbar />
-        <main className="min-h-[calc(100vh-96px-88px)]">{children}</main>
+        <main className="min-h-[calc(100vh-112px-144px)]">{children}</main>
         <Footer />
         <Toaster />
       </body>
