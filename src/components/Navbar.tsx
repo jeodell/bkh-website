@@ -45,22 +45,22 @@ export default function Navbar() {
               <DropdownMenuPortal>
                 <DropdownMenuSubContent className="bg-white p-2">
                   <DropdownMenuItem asChild>
-                    <Link href="travel" className="w-full cursor-pointer py-2">
+                    <Link href="/travel" className="w-full cursor-pointer py-2">
                       Travel
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="nature" className="w-full cursor-pointer py-2">
+                    <Link href="/nature" className="w-full cursor-pointer py-2">
                       Nature
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="portrait" className="w-full cursor-pointer py-2">
+                    <Link href="/portrait" className="w-full cursor-pointer py-2">
                       Portrait
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link href="drone" className="w-full cursor-pointer py-2">
+                    <Link href="/drone" className="w-full cursor-pointer py-2">
                       Drone
                     </Link>
                   </DropdownMenuItem>
@@ -68,23 +68,23 @@ export default function Navbar() {
               </DropdownMenuPortal>
             </DropdownMenuSub>
             <DropdownMenuItem asChild>
-              <Link href="film" className="w-full cursor-pointer py-2">
+              <Link href="/film" className="w-full cursor-pointer py-2">
                 Film
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="design" className="w-full cursor-pointer py-2">
+              <Link href="/design" className="w-full cursor-pointer py-2">
                 Design
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator className="h-[2px] bg-nature" />
             <DropdownMenuItem asChild>
-              <Link href="about" className="w-full cursor-pointer py-2">
+              <Link href="/about" className="w-full cursor-pointer py-2">
                 About
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="contact" className="w-full cursor-pointer py-2">
+              <Link href="/contact" className="w-full cursor-pointer py-2">
                 Contact
               </Link>
             </DropdownMenuItem>
@@ -106,36 +106,36 @@ export default function Navbar() {
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-56 bg-white p-2">
             <DropdownMenuItem asChild>
-              <Link href="travel" className="w-full py-2">
+              <Link href="/travel" className="w-full py-2">
                 Travel
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="nature" className="w-full py-2">
+              <Link href="/nature" className="w-full py-2">
                 Nature
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="portrait" className="w-full py-2">
+              <Link href="/portrait" className="w-full py-2">
                 Portrait
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild>
-              <Link href="drone" className="w-full py-2">
+              <Link href="/drone" className="w-full py-2">
                 Drone
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
-        <NavbarLink href="film" text="Film" />
-        <NavbarLink href="design" text="Design" />
+        <NavbarLink href="/film" text="Film" />
+        <NavbarLink href="/design" text="Design" />
       </div>
 
       {/* Center */}
       <div className="flex items-center justify-center">
         <Link
-          href="/"
-          className="rounded-md px-3 py-2 text-2xl font-extralight hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          href="//"
+          className="rounded-md px-3 py-2 text-2xl font-light hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
         >
           Brianna Haferman
         </Link>
@@ -144,8 +144,8 @@ export default function Navbar() {
       {/* Right */}
       <div className="hidden items-center justify-end lg:flex lg:gap-x-4">
         <div className="hidden justify-end lg:mr-6 lg:flex lg:space-x-8">
-          <NavbarLink href="about" text="About" />
-          <NavbarLink href="contact" text="Contact" />
+          <NavbarLink href="/about" text="About" />
+          <NavbarLink href="/contact" text="Contact" />
         </div>
       </div>
     </nav>

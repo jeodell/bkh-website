@@ -82,7 +82,7 @@ export default function Contact() {
 
   return (
     <div className="container mx-auto my-8 max-w-lg">
-      <h1 className="text-center text-2xl font-extralight">Contact Form</h1>
+      <h1 className="text-center text-2xl font-light">Contact Form</h1>
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>
           <div className="space-y-12">
