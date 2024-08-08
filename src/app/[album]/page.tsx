@@ -11,8 +11,12 @@ const pages = ['film', 'design', 'drone', 'nature', 'portrait', 'travel']
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   const albumName = params.album?.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 
-  return {
-    title: `Brianna Haferman | ${albumName}`,
+  if (pages.includes(params.album)) {
+    return {
+      title: `Brianna Haferman | ${albumName}`,
+    }
+  } else {
+    return {}
   }
 }
 
