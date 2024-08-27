@@ -37,8 +37,8 @@ export default function PhotoGrid(props: Props) {
           {photos.map((photo: { src: string; alt: string }) => (
             <div key={photo.alt} className="flex items-center justify-center">
               <iframe
-                width="560"
-                height="315"
+                width="594"
+                height="334"
                 src={photo.src}
                 title={photo.alt}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -53,10 +53,11 @@ export default function PhotoGrid(props: Props) {
   } else {
     return (
       <>
-        <div className="container mx-auto columns-1 gap-4 xs:columns-2 lg:columns-3 [&>img:not(:first-child)]:mt-4">
+        <div className="container mx-auto columns-1 xs:columns-2 lg:columns-3 2xl:columns-4 [&>img:not(:first-child)]:mt-4">
           {photos.map((photo: { src: string; alt: string }) => (
             <Image
               key={photo.alt}
+              className="cursor-pointer"
               src={`/images/${album}/${photo.src}`}
               alt={photo.alt}
               width={400}
