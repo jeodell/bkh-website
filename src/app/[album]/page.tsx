@@ -31,11 +31,12 @@ export default function Page({ params }: { params: { album: string } }) {
   }
 
   const albumName = params.album?.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+  const isVideo = params.album === 'film'
 
   return (
     <div className="mb-24 mt-12">
       <h1 className="mb-12 text-center text-4xl font-light">{albumName}</h1>
-      <PhotoGrid album={params.album} />
+      <PhotoGrid album={params.album} isVideo={isVideo} />
     </div>
   )
 }

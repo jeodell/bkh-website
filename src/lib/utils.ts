@@ -116,4 +116,14 @@ export const photoLinks: { [key: string]: { src: string; alt: string }[] } = {
     { src: 'Trail Map_Hauser Trailhead (28x32).jpg', alt: '' },
     { src: 'Grand Opening S&E Thomas Trail Poster.jpg', alt: '' },
   ],
+  film: [
+    {
+      src: 'https://youtube.com/embed/HQvY3i-DGTw?si=CAvzlLQdmtyIILXL&autoplay=1&loop=1&rel=0&mute=1',
+      alt: 'Bashavia Creek Preserve',
+    },
+    {
+      src: 'https://youtube.com/embed/CHUsTTKTllw?si=7h94srzcQUKCMPLz&autoplay=1&loop=1&rel=0&mute=1',
+      alt: 'Protected Lands',
+    },
+  ],
 }
