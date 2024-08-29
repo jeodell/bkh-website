@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function About() {
   return (
@@ -23,7 +24,13 @@ export default function About() {
           just thank you for looking.
         </p>
         <p className="lg:text-lg">Based in North Carolina.</p>
-        <p className="lg:text-lg">Any questions? Feel free to contact me!</p>
+        <p className="lg:text-lg">
+          Any questions? Feel free to{' '}
+          <Link href="/contact" className="text-primary hover:underline">
+            contact
+          </Link>{' '}
+          me!
+        </p>
       </div>
     </section>
   )
