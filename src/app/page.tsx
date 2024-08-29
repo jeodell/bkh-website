@@ -39,7 +39,7 @@ export default function Home() {
           color="bg-drone"
           src="/images/drone/Quarry Park and Greenway WS_Drone_Brianna Haferman.jpg"
         />
-        <Card href="film" title="Film" color="bg-film" src="/images/film/cover.jpg" />
+        <Card href="film" title="Film" color="bg-film" src="/images/film/Bashavia Creek Preserve 2.jpg" />
         <Card
           href="/design"
           title="Design"
