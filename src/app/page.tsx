@@ -14,7 +14,7 @@ export default function Home() {
           priority
         />
       </div>
-      <div className="3xl:grid-cols-6 container grid max-w-7xl grid-cols-1 gap-8 py-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="3xl:grid-cols-6 container grid grid-cols-1 gap-8 p-12 md:grid-cols-2 md:p-16 xl:grid-cols-3 xl:p-24">
         <Card
           href="/travel"
           title="Travel"
