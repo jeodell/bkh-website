@@ -5,6 +5,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { toast } from '@/components/ui/use-toast'
+import { sendContactForm } from '@/lib/utils'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -34,6 +35,7 @@ export default function Contact() {
     },
   })
   const [isLoading, setIsLoading] = useState(false)
+  const [isDisabled, setIsDisabled] = useState(false)
 
   function resetForm() {
     form.reset()
@@ -50,20 +52,17 @@ export default function Contact() {
     const message = data.message
 
     try {
-      // TODO revert
-      // await sendContactForm({
-      //   name,
-      //   email,
-      //   message,
-      // })
-      toast({
-        title: 'You submitted the following values:',
-        description: (
-          <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4">
-            <code className="text-white">{JSON.stringify({ name, email, message }, null, 2)}</code>
-          </pre>
-        ),
+      setIsDisabled(true)
+      await sendContactForm({
+        name,
+        email,
+        message,
       })
+      toast({
+        title: 'Thanks for emailing me!',
+        description: 'I will get back to you soon',
+      })
+      resetForm()
     } catch (error) {
       console.error(error)
       if (error instanceof Error) {
@@ -72,6 +71,8 @@ export default function Contact() {
           description: error.message,
         })
       }
+    } finally {
+      setIsDisabled(false)
     }
 
     setIsLoading(false)
@@ -139,7 +140,13 @@ export default function Contact() {
             <Button type="button" variant="ghost" size="sm" onClick={onCancel}>
               Cancel
             </Button>
-            <Button type="submit" variant="default" size="sm" className="focus-visible:ring-offset-2">
+            <Button
+              type="submit"
+              variant="default"
+              size="sm"
+              className="focus-visible:ring-offset-2"
+              disabled={isDisabled}
+            >
               Send
             </Button>
           </div>
