@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils'
 import { Button } from '@components/ui/button'
 import {
   DropdownMenu,
@@ -11,8 +12,11 @@ import {
   DropdownMenuTrigger,
 } from '@components/ui/dropdown-menu'
 import { ChevronDownIcon } from 'lucide-react'
+import { Glegoo } from 'next/font/google'
 import Link from 'next/link'
 import NavbarLink from './ui/navbar-link'
+
+const glegoo = Glegoo({ subsets: ['latin'], weight: ['400', '700'] })
 
 export default function Navbar() {
   return (
@@ -135,7 +139,10 @@ export default function Navbar() {
       <div className="flex items-center justify-center">
         <Link
           href="//"
-          className="rounded-md px-3 py-2 text-center text-2xl font-light hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className={cn(
+            glegoo.className,
+            'rounded-md px-3 py-2 text-center text-2xl font-light hover:text-gray-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring',
+          )}
         >
           Brianna Haferman
         </Link>
