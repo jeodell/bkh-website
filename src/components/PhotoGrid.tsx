@@ -34,8 +34,8 @@ export default function PhotoGrid(props: Props) {
     return (
       <>
         <div className="container mx-auto columns-1 gap-4 space-y-8 xl:columns-2 [&>img:not(:first-child)]:mt-4">
-          {photos.map((photo: { src: string; alt: string }) => (
-            <div key={photo.alt} className="flex items-center justify-center">
+          {photos.map((photo: { src: string; alt: string }, index: number) => (
+            <div key={index} className="flex items-center justify-center">
               <iframe
                 width="594"
                 height="334"
@@ -54,16 +54,16 @@ export default function PhotoGrid(props: Props) {
     return (
       <>
         <div className="container mx-auto columns-1 xs:columns-2 lg:columns-3 2xl:columns-4 [&>img:not(:first-child)]:mt-4">
-          {photos.map((photo: { src: string; alt: string }) => (
+          {photos.map((photo: { src: string; alt: string }, index: number) => (
             <Image
-              key={photo.alt}
+              key={index}
               className="cursor-pointer"
               src={`/images/${album}/${photo.src}`}
               alt={photo.alt}
               width={400}
               height={400}
               onClick={() => {
-                setIndex(photos.indexOf(photo))
+                setIndex(index)
               }}
             />
           ))}
