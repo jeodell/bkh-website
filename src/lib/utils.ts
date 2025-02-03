@@ -149,5 +149,9 @@ export const photoLinks: { [key: string]: { src: string; alt: string }[] } = {
       src: 'https://youtube.com/embed/CHUsTTKTllw?si=7h94srzcQUKCMPLz&autoplay=1&loop=1&rel=0&mute=1',
       alt: 'Protected Lands',
     },
+    {
+      src: 'https://www.youtube.com/embed/-qDQP4gXL04?si=gYvdlO9rkIcNHh3i&autoplay=1&loop=1&rel=0&mute=1',
+      alt: 'Mitchell River Preserve',
+    },
   ],
 }
