@@ -60,7 +60,7 @@ export const photoLinks: { [key: string]: { src: string; alt: string }[] } = {
     { src: 'Turkey Tail.jpg', alt: '' },
     { src: 'White Throated Sparrow.jpg', alt: '' },
     { src: 'Mocking Bird.jpg', alt: '' },
-    { src: 'Guilford Woods.jpg', alt: '' },
+    { src: 'Guilford woods.jpg', alt: '' },
     { src: 'Haw.jpg', alt: '' },
     { src: 'River and Bridge in Fall_Brianna Haferman.jpg', alt: '' },
     { src: 'Great Blue Heron.jpg', alt: '' },
